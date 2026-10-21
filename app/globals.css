@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
+/* Kertas uang dan tinta cetak. Merah, kuning, hijau hanya dipakai untuk status. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --paper: #f1f3ee;
+  --raised: #fafbf8;
+  --ink: #14283a;
+  --muted: #586976;
+  --line: #cfd6d0;
+  --track: #dde3dd;
+  --kritis: #b42318;
+  --kritis-ink: #ffffff;
+  --waspada: #e8a600;
+  --waspada-ink: #2e2200;
+  --aman: #1d7a4c;
+  --aman-ink: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --paper: #0e1a23;
+    --raised: #132330;
+    --ink: #e4ebe7;
+    --muted: #94a5b0;
+    --line: #273a49;
+    --track: #1f3242;
+    --kritis: #f26a5f;
+    --kritis-ink: #2a0703;
+    --waspada: #f0c04a;
+    --waspada-ink: #2e2200;
+    --aman: #4cc48a;
+    --aman-ink: #052414;
   }
 }
 
+@theme inline {
+  --color-paper: var(--paper);
+  --color-raised: var(--raised);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-track: var(--track);
+  --color-kritis: var(--kritis);
+  --color-kritis-ink: var(--kritis-ink);
+  --color-waspada: var(--waspada);
+  --color-waspada-ink: var(--waspada-ink);
+  --color-aman: var(--aman);
+  --color-aman-ink: var(--aman-ink);
+  --font-sans: var(--font-archivo);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
 }
